@@ -2351,7 +2351,10 @@ function renderMain() {
   $('#tabs').innerHTML = tabs.map(([id, label, cnt, cls]) =>
     `<button data-tab="${id}">${label}${cnt != null ? `<span class="cnt ${cls}">${cnt}</span>` : ''}</button>`).join('');
   document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
-  renderDash(); renderForbidden(); renderLength(); renderStyle(); renderTypos(); renderEnding(); renderSim(); renderMissing(); renderStudents();
+  // 탭 하나가 실패해도 나머지 탭은 그려지도록 개별 보호
+  for (const fn of [renderDash, renderForbidden, renderLength, renderStyle, renderTypos, renderEnding, renderSim, renderMissing, renderStudents]) {
+    try { fn(); } catch (e) { console.error(fn.name, e); }
+  }
   showTab('dash');
 }
 function showTab(id) {
@@ -3146,7 +3149,7 @@ function lengthItems(list, refs, infoMode) {
   const L = NEISCheck.LIMITS;
   const KIND = { over: ['danger', '상한 초과'], under: ['warn', '분량 부족'], pairover: ['danger', '합산 초과'], pairunder: ['warn', '합산 부족'] };
   return list.map(l => {
-    const isInfo = !!infoMode;
+    const isInfo = !!infoMode || l.kind === 'info';
     const k = refs.length; refs.push(l);
     const isPair = l.kind === 'pairover' || l.kind === 'pairunder' || isInfo;
     const subj = l.entry2 ? `${esc(l.entry.label)} + ${esc(l.entry2.label)}` : esc(l.entry.label);

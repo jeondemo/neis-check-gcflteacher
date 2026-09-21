@@ -540,6 +540,61 @@ https://github.com/nodeca/pako/blob/main/LICENSE
   .clsbar.none::before { background: rgba(255,255,255,.35) !important; }
   .clsbar.none .cnt { color: #9fa3ae !important; }
   .note-line { text-align: center; color: var(--faint); font-size: 12px; padding: 8px 0 2px; }
+  /* ---- 검사 탭: 과목 카드 (시안 44) ---- */
+  .tabhead { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; }
+  .tabhead h3 { font-size: 15px; font-weight: 800; }
+  .tabhead h3 b { font-size: 17px; margin: 0 1px; }
+  .tabhead h3 b.hot { color: var(--danger); } .tabhead h3 b.warm { color: var(--warn); } .tabhead h3 b.ok { color: var(--ok); }
+  .tabhead .meta { font-size: 12.5px; color: var(--faint); }
+  .seg { margin-left: auto; display: inline-flex; background: #efe8e5; border-radius: 99px; padding: 3px; flex: none; }
+  .seg button { font: inherit; font-size: 12px; font-weight: 700; padding: 5px 13px; border-radius: 99px; color: var(--sub); border: none; background: none; cursor: pointer; }
+  .seg button.on { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .tgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .mat2.tabc { padding: 18px 20px 16px; border-radius: 18px; }
+  .mat2.tabc h3 { font-size: 19px; margin-top: 10px; }
+  .mat2.tabc .kind { font-size: 9.5px; padding: 3px 11px; }
+  .mat2.tabc .m-meta { min-height: 16px; }
+  .mat2.tabc .big { display: flex; align-items: baseline; gap: 8px; margin-top: 12px; flex-wrap: wrap; padding-right: 36px; }
+  .mat2.tabc .big b { font-size: 30px; font-weight: 800; color: #fff; letter-spacing: -1px; line-height: 1; }
+  .mat2.tabc .big span { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 99px; background: rgba(5,8,24,.35); border: 1px solid rgba(160,180,235,.2); }
+  .mat2.tabc .big .hot { color: #ffb4a8; border-color: rgba(255,140,120,.45); }
+  .mat2.tabc .big .warm { color: #f2d492; border-color: rgba(232,182,76,.45); }
+  .mat2.tabc .words { display: block; font-size: 11.5px; color: #a7b2d8; margin-top: 10px; padding-top: 9px; border-top: 1px solid rgba(255,255,255,.1); padding-right: 36px; line-height: 1.6; }
+  .mat2.tabc .words i { font-style: normal; color: #ffb4a8; font-weight: 700; }
+  .mat2.tabc.cc .words { color: #a9cdbb; } .mat2.tabc.cc .words i { color: #ffd3a8; }
+  .mat2.tabc .go { right: 16px; bottom: 14px; width: 26px; height: 26px; font-size: 13px; }
+  .okrule { display: flex; align-items: center; gap: 12px; margin: 22px 0 12px; font-size: 12px; font-weight: 800; letter-spacing: 1px; color: var(--ok); }
+  .okrule::before, .okrule::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(22,163,74,.35), var(--line)); }
+  .okrule::after { background: linear-gradient(90deg, var(--line), rgba(22,163,74,.35)); }
+  .lgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+  .lcard { background: var(--card); border: 1px solid var(--line); border-radius: 13px; padding: 12px 14px 11px; cursor: pointer; text-align: left; font-family: inherit; color: var(--ink);
+    display: block; transition: transform .15s, box-shadow .15s; }
+  .lcard:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(60,15,20,.07); }
+  .lcard .kind { display: block; font-size: 9.5px; letter-spacing: 2px; font-weight: 800; color: var(--faint); }
+  .lcard.cc .kind { color: #2f7a55; }
+  .lcard .h4 { display: flex; align-items: baseline; gap: 8px; font-size: 15px; font-weight: 800; margin-top: 4px; letter-spacing: -.2px; min-width: 0; }
+  .lcard .h4 .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lcard .h4 .cls { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--sub); white-space: nowrap; flex: none; }
+  .lcard .h4 .cls .all { color: #b8860b; }
+  .lcard .tch { display: block; font-size: 11.5px; color: var(--faint); margin-top: 2px; min-height: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lcard .row { display: flex; align-items: center; gap: 6px; margin-top: 9px; }
+  .lcard .ok { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 99px; background: var(--ok-soft); color: var(--ok); }
+  .lcard .row .meta { margin-left: auto; font-size: 11.5px; color: var(--faint); }
+  .tab-bc { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--faint); margin-bottom: 12px; }
+  .tab-bc b { color: var(--ink); }
+  .tab-bc .back { margin-left: auto; font: inherit; font-size: 12px; font-weight: 700; color: var(--accent); border: 1px solid #ead2cd; border-radius: 99px; padding: 4px 12px; background: var(--card); cursor: pointer; }
+  .tab-dhead { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+  .tab-dhead .tt { display: flex; align-items: center; gap: 10px; }
+  .tab-dhead .kind { font-size: 9.5px; letter-spacing: 2px; font-weight: 800; color: var(--faint); }
+  .tab-dhead.cc .kind { color: #2f7a55; }
+  .tab-dhead h3 { font-size: 17px; font-weight: 800; }
+  .tab-dhead .meta { font-size: 12.5px; color: var(--sub); }
+  .tab-dhead .dchips { display: flex; gap: 6px; }
+  .tab-dhead .clschips { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+  .tab-dhead .clschips button { font: inherit; font-size: 11.5px; font-weight: 700; padding: 4px 11px; border-radius: 99px; background: #f3ecea; color: var(--sub); border: none; cursor: pointer; }
+  .tab-dhead .clschips button.on { background: var(--ink); color: #fff; }
+  .clsline { font-size: 12px; font-weight: 800; letter-spacing: 1px; color: var(--faint); margin: 18px 0 8px; display: flex; align-items: center; gap: 10px; }
+  .clsline::after { content: ''; flex: 1; height: 1px; background: var(--line); }
   /* ---- 봉사활동 상세 ---- */
   .volbox { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 15px 18px; margin-bottom: 14px; }
   .volhead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -2246,7 +2301,13 @@ $('#btn-reset').onclick = () => location.reload();
 // 브라우저 뒤로가기: 상세 → 대시보드 카드 목록으로 (창이 닫히지 않게)
 window.addEventListener('popstate', e => {
   if (!state.res) return;
-  state.matSel = e.state && e.state.matSel != null ? e.state.matSel : null;
+  const st = e.state || {};
+  if (st.tab && ISSUE_TABS[st.tab]) { // 검사 탭의 과목 카드 ↔ 과목 상세
+    state.tabSel = st.matIdx != null ? { tab: st.tab, i: st.matIdx } : null;
+    renderIssueTab(st.tab); showTab(st.tab); window.scrollTo(0, 0); return;
+  }
+  state.tabSel = null;
+  state.matSel = st.matSel != null ? st.matSel : null;
   showTab('dash');
   renderDash();
   window.scrollTo(0, 0);
@@ -2259,7 +2320,7 @@ function fmtClass(cc) { return cc ? `${cc[0]}학년 ${+cc.slice(1)}반` : '반 �
 function stuLabel(st) { return `${st.num}번 ${st.name}`; }
 
 function renderMain() {
-  state.matSel = null;
+  state.matSel = null; state.tabSel = null;
   state.accOpen = new Set();
   try { history.replaceState({ matSel: null }, ''); } catch (e) {}
   const r = state.res;
@@ -3057,14 +3118,16 @@ function renderMatDetail(m) {
   });
 }
 
-function renderForbidden() {
-  const r = state.res;
-  if (!r.forbidden.length) {
-    $('#panel-forbidden').innerHTML = '<div class="empty"><div class="big">✅</div>기재금지·주의 표현이 발견되지 않았습니다.</div>'; return;
-  }
-  const order = { '금지': 0, '주의': 1 };
-  const list = [...r.forbidden].sort((a, b) => order[a.rule.grade] - order[b.rule.grade]);
-  $('#panel-forbidden').innerHTML = list.map(f => `
+/* ---------- 검사 탭: 과목 카드 → 과목 상세 (시안 44) ---------- */
+// 지적이 있는 과목은 다크 카드(건수 많은 순), 이상 없는 과목은 라이트 카드로 뒤에. 오른쪽 위 토글로 예전 전체 목록도 가능.
+const topWords = (arr, n = 5) => {
+  const c = new Map();
+  arr.forEach(w => c.set(w, (c.get(w) || 0) + 1));
+  return [...c].sort((a, b) => b[1] - a[1]).slice(0, n);
+};
+const GRADE_ORD = { '금지': 0, '주의': 1 };
+function forbiddenItems(list) {
+  return list.map(f => `
     <div class="issue">
       <div class="issue-head">
         <span class="pill ${f.rule.grade === '금지' ? 'danger' : 'warn'}">${f.rule.grade}</span>
@@ -3079,6 +3142,282 @@ function renderForbidden() {
       </div>
     </div>`).join('');
 }
+function lengthItems(list, refs, infoMode) {
+  const L = NEISCheck.LIMITS;
+  const KIND = { over: ['danger', '상한 초과'], under: ['warn', '분량 부족'], pairover: ['danger', '합산 초과'], pairunder: ['warn', '합산 부족'] };
+  return list.map(l => {
+    const isInfo = !!infoMode;
+    const k = refs.length; refs.push(l);
+    const isPair = l.kind === 'pairover' || l.kind === 'pairunder' || isInfo;
+    const subj = l.entry2 ? `${esc(l.entry.label)} + ${esc(l.entry2.label)}` : esc(l.entry.label);
+    let body;
+    if (isInfo) body = `공통과목은 <b style="color:#3b6bc4">1·2학기 합산 기준 ${l.cap.toLocaleString()}B</b> — 현재 ${l.entry.label.slice(-1) === '2' ? '2학기' : '1학기'}분 ${l.sum.toLocaleString()}B 사용, 남은 여유 <b style="color:#3b6bc4">${(l.cap - l.sum).toLocaleString()}B</b> (나머지 학기 자료가 오면 합산으로 판정)`;
+    else if (isPair) body = `합산 <b>${l.sum.toLocaleString()}B</b> (기준 ${l.kind === 'pairover' ? '≤' + l.cap.toLocaleString() : '≥' + L.minBytes.toLocaleString()}B) — ${l.kind === 'pairover' ? `<b>${l.diff.toLocaleString()}B 초과</b>. 두 학기 내용을 합쳐 그만큼 줄여야 NEIS에 모두 들어갑니다.` : `<b>${l.diff.toLocaleString()}B 부족</b>. 활동 내용을 보강해 주세요.`}`;
+    else body = `현재 <b>${l.entry.bytes.toLocaleString()}B</b> (기준 ${l.kind === 'over' ? '≤' : '≥'}${(l.kind === 'over' ? l.cap : L.minBytes).toLocaleString()}B) — ${l.kind === 'over' ? `<b>${l.diff.toLocaleString()}B 초과</b>. NEIS 입력 시 잘릴 수 있으니 줄여야 합니다.` : `<b>${l.diff.toLocaleString()}B 부족</b>. 활동 내용을 보강해 주세요.`}`;
+    const pill = isInfo ? '<span class="pill info-b">합산 사용량</span>' : `<span class="pill ${KIND[l.kind][0]}">${KIND[l.kind][1]}</span>`;
+    return `<div class="issue len-row" data-k="${k}">
+      <div class="issue-head">${pill}
+        <span class="who">${fmtClass(l.st.classCode)} ${stuLabel(l.st)}</span>
+        <span class="subj">${subj}</span>${tch(l.entry)}
+        <span class="subj" style="margin-left:auto">▾ 내용 보기</span>
+      </div>
+      ${isPair && !isInfo ? lenGauge(l) : (isInfo ? lenGauge({ ...l, kind: 'info' }) : '')}
+      <div class="issue-body">${body}</div>
+      <div class="len-detail" id="lend-${k}"></div>
+    </div>`;
+  }).join('');
+}
+function lengthBind(panel, refs) {
+  panel.querySelectorAll('.len-row').forEach(el => el.onclick = () => {
+    const k = +el.dataset.k, d = document.getElementById('lend-' + k);
+    if (d.classList.contains('open')) { d.classList.remove('open'); return; }
+    if (!d.innerHTML) d.innerHTML = lenBodyHTML(refs[k]);
+    d.classList.add('open');
+  });
+}
+function styleItems(list) {
+  return list.map(s => `
+    <div class="issue">
+      <div class="issue-head">
+        <span class="pill warn">${s.kind === 'repeat' ? '표현 반복' : '클리셰'}</span>
+        <span class="who">${fmtClass(s.st.classCode)} ${stuLabel(s.st)}</span>
+        <span class="subj">${esc(s.entry.label)}</span>${tch(s.entry)}
+      </div>
+      <div class="issue-body">'<b>${esc(s.word)}</b>' ${s.kind === 'repeat' ? `표현이 한 과목 안에서 ${s.count}회 사용됨 — 다른 표현으로 다듬어 주세요.` : `사용 (${s.count}회) — 상투적 표현이라 구체적 사실 중심 서술이 좋습니다.`}</div>
+    </div>`).join('');
+}
+function typoItems(list) {
+  return list.map(t => `
+    <div class="issue">
+      <div class="issue-head">
+        <span class="pill warn">오탈자</span>
+        <span class="who">${fmtClass(t.st.classCode)} ${stuLabel(t.st)}</span>
+        <span class="subj">${esc(t.entry.label)}</span>${tch(t.entry)}
+      </div>
+      <div class="issue-body">
+        <div class="ctx">${esc(t.context).replace(esc(t.match), `<mark>${esc(t.match)}</mark>`)}</div>
+        <div class="why"><b>바른 표기</b> · ${esc(t.fix)}</div>
+      </div>
+    </div>`).join('');
+}
+function endingItems(list) {
+  return list.map(x => `
+    <div class="issue">
+      <div class="issue-head">
+        <span class="pill ${x.kind === 'cut' ? 'danger' : 'warn'}">${x.kind === 'cut' ? '문장 끊김' : '마침표 누락'}</span>
+        <span class="who">${fmtClass(x.st.classCode)} ${stuLabel(x.st)}</span>
+        <span class="subj">${esc(x.entry.label)}</span>${tch(x.entry)}
+      </div>
+      <div class="issue-body">
+        <div class="ctx">${endHl(x.tail, x.kind)}</div>
+        <div class="why">${x.kind === 'cut'
+          ? '<b>문장이 끝나기 전에 끊겼습니다</b> — 붙여넣기 중 바이트 초과로 잘렸을 가능성이 있으니 NEIS 원문을 확인해 주세요.'
+          : '<b>마지막 마침표가 없습니다</b> — 문장은 완결됐지만 끝부분이 잘렸을 수도 있으니 확인해 주세요.'}</div>
+      </div>
+    </div>`).join('');
+}
+function simItems(list, refs) {
+  return list.map(s => {
+    const k = refs.length; refs.push(s);
+    return `
+    <div class="issue sim-row" data-k="${k}">
+      <div class="issue-head">
+        <span class="pill ${s.grade === '위험' ? 'danger' : 'warn'}">${s.grade}</span>
+        <span class="subj">${esc(s.subject)}</span>${tch(s.a.entry)}
+        <span class="who">${fmtClass(s.a.st.classCode)} ${stuLabel(s.a.st)} ↔ ${fmtClass(s.b.st.classCode)} ${stuLabel(s.b.st)}</span>
+        <span class="sim-score ${s.grade === '위험' ? 'hot' : 'mid'}" style="margin-left:auto">${(s.sim * 100).toFixed(0)}%</span>
+      </div>
+      <div class="sim-detail" id="simd-${k}"></div>
+    </div>`;
+  }).join('');
+}
+function simBind(panel, refs) {
+  panel.querySelectorAll('.sim-row').forEach(el => el.onclick = () => {
+    const k = +el.dataset.k, d = document.getElementById('simd-' + k), s = refs[k];
+    if (d.classList.contains('open')) { d.classList.remove('open'); return; }
+    if (!d.innerHTML) {
+      const ov = NEISCheck.sentenceOverlap(s.a.entry.body, s.b.entry.body);
+      const col = (st, sents, hits) => `<div class="sim-col"><h4>${fmtClass(st.classCode)} ${stuLabel(st)} · ${esc(s.subject)}</h4>${sents.map((t, k2) => `<p class="${hits.has(k2) ? 'hit' : ''}">${esc(t)}</p>`).join('')}</div>`;
+      d.innerHTML = col(s.a.st, ov.sa, ov.hitA) + col(s.b.st, ov.sb, ov.hitB);
+    }
+    d.classList.add('open');
+  });
+}
+
+const ISSUE_TABS = {
+  forbidden: {
+    title: '기재금지', key: 'f', unit: '건',
+    all: r => [...r.forbidden].sort((a, b) => GRADE_ORD[a.rule.grade] - GRADE_ORD[b.rule.grade]),
+    chips: l => { const b = l.filter(x => x.rule.grade === '금지').length, w = l.length - b; return [b ? ['hot', `금지 ${b}`] : null, w ? ['warm', `주의 ${w}`] : null]; },
+    hot: l => l.some(x => x.rule.grade === '금지'),
+    words: l => topWords(l.map(x => x.match)).map(([w, n]) => `<i>${esc(w)}</i> ${n}`).join(' · '),
+    items: (l) => forbiddenItems(l),
+    empty: '기재금지·주의 표현이 발견되지 않았습니다.'
+  },
+  length: {
+    title: '분량', key: 'l', unit: '건',
+    note: () => `상한(한글 3B·영문/숫자 1B): 교과 세특·자율·동아리 1,500B · 진로활동 1·2학년 1,500B/3학년 2,100B · 행동특성 1·2학년 900B/3학년 1,500B · <b>1학년 공통과목(공통국어·수학·영어, 통합사회·과학, 한국사 등)은 1·2학기 합산 1,500B</b> · 교과 세특 ${NEISCheck.LIMITS.minBytes.toLocaleString()}B 미만은 분량 부족 주의 · 항목을 누르면 기재 내용이 펼쳐집니다`,
+    all: r => { const ord = { pairover: 0, over: 0, pairunder: 1, under: 1 }; return [...r.length].sort((a, b) => (ord[a.kind] - ord[b.kind]) || b.diff - a.diff); },
+    chips: l => { const o = l.filter(x => x.kind === 'over' || x.kind === 'pairover').length, u = l.length - o; return [o ? ['hot', `초과 ${o}`] : null, u ? ['warm', `부족 ${u}`] : null]; },
+    hot: l => l.some(x => x.kind === 'over' || x.kind === 'pairover'),
+    words: l => { const o = l.filter(x => x.kind === 'over' || x.kind === 'pairover'), u = l.filter(x => x.kind === 'under' || x.kind === 'pairunder'); const p = []; if (o.length) p.push(`최대 <i>${Math.max(...o.map(x => x.diff)).toLocaleString()}B</i> 초과`); if (u.length) p.push(`최대 ${Math.max(...u.map(x => x.diff)).toLocaleString()}B 부족`); return p.join(' · '); },
+    items: (l, refs) => lengthItems(l, refs, false), bind: lengthBind,
+    extra: (r, m) => { // 1학년 공통과목 합산 사용량 안내 (한 학기만 있을 때)
+      let infos = r.pairInfo || [];
+      if (m) { const p = matPred(m); infos = infos.filter(x => p(x.entry) && (m.classes.size === 0 || m.classes.has(x.st.classCode))); }
+      if (!infos.length) return '';
+      return { html: `<div class="section-title">1학년 공통과목 합산 사용량</div><div class="section-note">한 학기 자료만 있어 판정 대신 사용량만 안내합니다 — 나머지 학기 자료까지 올리면 합산으로 판정됩니다</div>`, list: infos.map(p => ({ ...p, kind: 'info' })) };
+    },
+    empty: '분량 기준을 벗어난 항목이 없습니다.'
+  },
+  style: {
+    title: '문체', key: 'sty', unit: '건',
+    all: r => [...r.style],
+    chips: l => { const rp = l.filter(x => x.kind === 'repeat').length, c = l.length - rp; return [rp ? ['warm', `반복 ${rp}`] : null, c ? ['warm', `클리셰 ${c}`] : null]; },
+    hot: () => false,
+    words: l => topWords(l.map(x => x.word)).map(([w, n]) => `<i>${esc(w)}</i> ${n}`).join(' · '),
+    items: (l) => styleItems(l),
+    empty: '문체·클리셰 관련 지적 사항이 없습니다.'
+  },
+  typos: {
+    title: '오탈자', key: 'ty', unit: '건',
+    note: () => '오프라인 규칙 검사입니다 — 자주 틀리는 맞춤법·외래어 표기·이중 피동·단어 반복·문장부호·띄어쓰기·마침표 누락·서술형 종결을 잡습니다 (완전한 맞춤법 검사를 대신하지는 않음)',
+    all: r => [...r.typos],
+    chips: l => { const d = l.filter(x => x.fix.includes('마침표 누락')).length, s = l.filter(x => x.fix.startsWith('띄어쓰기')).length, o = l.length - d - s; return [o ? ['warm', `표기 ${o}`] : null, s ? ['warm', `띄어쓰기 ${s}`] : null, d ? ['warm', `마침표 ${d}`] : null]; },
+    hot: () => false,
+    words: l => topWords(l.map(x => x.match)).map(([w, n]) => `<i>${esc(w)}</i> ${n}`).join(' · '),
+    items: (l) => typoItems(l),
+    empty: '오탈자·표기 오류가 발견되지 않았습니다.'
+  },
+  ending: {
+    title: '문장 맺음', key: 'end', unit: '건',
+    note: () => '기재 내용의 끝맺음을 검사합니다 — 엑셀에서 복사해 NEIS에 붙여넣을 때 바이트 초과로 뒷부분이 잘려 문장이 중간에 끊기는 사례를 잡습니다 · 빨간 커서가 끊긴 지점입니다',
+    all: r => [...r.ending].sort((a, b) => (a.kind === 'cut' ? 0 : 1) - (b.kind === 'cut' ? 0 : 1)),
+    chips: l => { const c = l.filter(x => x.kind === 'cut').length, d = l.length - c; return [c ? ['hot', `끊김 ${c}`] : null, d ? ['warm', `마침표 ${d}`] : null]; },
+    hot: l => l.some(x => x.kind === 'cut'),
+    words: l => { const c = l.filter(x => x.kind === 'cut'); return c.length ? `끊긴 예: <i>${esc(c[0].tail.slice(-16))}</i>` : ''; },
+    items: (l) => endingItems(l),
+    empty: '모든 기재 내용이 문장으로 끝맺어져 있습니다.'
+  },
+  sim: {
+    title: '유사도', key: 'sim', unit: '쌍',
+    note: () => `같은 과목을 들은 학생끼리 문자 3-gram 유사도를 비교합니다 · ${NEISCheck.LIMITS.simDanger} 이상 위험, ${NEISCheck.LIMITS.simWarn} 이상 주의 · 항목을 누르면 겹치는 문장이 나란히 표시됩니다`,
+    all: r => [...r.similarity].sort((a, b) => b.sim - a.sim),
+    chips: l => { const d = l.filter(x => x.grade === '위험').length, w = l.length - d; return [d ? ['hot', `위험 ${d}`] : null, w ? ['warm', `주의 ${w}`] : null]; },
+    hot: l => l.some(x => x.grade === '위험'),
+    words: l => l.length ? `최고 유사도 <i>${(Math.max(...l.map(x => x.sim)) * 100).toFixed(0)}%</i>` : '',
+    items: (l, refs) => simItems(l, refs), bind: simBind,
+    clsOf: x => x.a.st.classCode,
+    empty: '유사도가 높은 학생 쌍이 없습니다.'
+  },
+};
+function tabMats() { return (state.mats || []).map((m, i) => ({ m, i })).filter(x => !x.m.ghost && x.m.iss); }
+function matRank(m) { return m.norm === '__cc__' ? 1 : (m.norm === '__ht__' ? 2 : (m.norm === '__vol__' ? 3 : 0)); }
+function renderIssueTab(tab) {
+  const cfg = ISSUE_TABS[tab], r = state.res, panel = $('#panel-' + tab);
+  if (!state.tabView) state.tabView = {};
+  if (!state.tabCls) state.tabCls = {};
+  const all = cfg.all(r);
+  const view = state.tabView[tab] || 'cards';
+  const sel = state.tabSel && state.tabSel.tab === tab && state.mats && state.mats[state.tabSel.i] ? state.mats[state.tabSel.i] : null;
+  const refs = [];
+  let html = cfg.note ? `<div class="section-note">${cfg.note()}</div>` : '';
+  const mats = tabMats();
+  const withIss = mats.filter(x => x.m.iss[cfg.key].length);
+  const clean = mats.filter(x => !x.m.iss[cfg.key].length);
+  const segHtml = `<span class="seg"><button class="${view === 'cards' ? 'on' : ''}" data-v="cards">과목별</button><button class="${view === 'list' ? 'on' : ''}" data-v="list">전체 목록</button></span>`;
+  const head = (right) => `<div class="tabhead"><h3>${cfg.title} <b class="${cfg.hot(all) ? 'hot' : (all.length ? 'warm' : 'ok')}">${all.length}</b>${cfg.unit}</h3><span class="meta">${right}</span>${segHtml}</div>`;
+
+  if (view === 'list' || !mats.length) {
+    // 예전 방식: 과목 구분 없는 한 줄 목록
+    html += mats.length ? head(`지적 과목 ${withIss.length} · 이상 없음 ${clean.length}`) : '';
+    html += all.length ? cfg.items(all, refs) : `<div class="empty"><div class="big">✅</div>${cfg.empty}</div>`;
+    const ex = cfg.extra ? cfg.extra(r, null) : '';
+    if (ex) html += ex.html + cfg.items(ex.list, refs, true);
+    panel.innerHTML = html;
+  } else if (sel) {
+    // 과목 상세: 이 항목의 지적만 반별로
+    const list = sel.iss[cfg.key];
+    const clsOf = cfg.clsOf || (x => x.st.classCode);
+    const byCls = new Map();
+    list.forEach(x => { const c = clsOf(x) || '?'; if (!byCls.has(c)) byCls.set(c, []); byCls.get(c).push(x); });
+    const ccs = [...byCls.keys()].sort();
+    const cur = state.tabCls[tab] && byCls.has(state.tabCls[tab]) ? state.tabCls[tab] : null;
+    const tNames = sel.teachers && sel.teachers.size ? [...sel.teachers].join(', ') : '';
+    const chips = cfg.chips(list).filter(Boolean).map(([c, t]) => `<span class="pill ${c === 'hot' ? 'danger' : 'warn'}">${t}</span>`).join('');
+    html += `<div class="tab-bc"><span>${cfg.title}</span><span class="sep">›</span><b>${esc(sel.name)}</b><button class="back" id="tab-back">← 과목 카드로</button></div>
+      <div class="tab-dhead ${sel.cls}"><div class="tt"><span class="kind">${sel.kind}</span><h3>${esc(sel.name)}</h3></div>
+        <span class="meta">${clsLabel(sel)}${tNames ? ' · 담당 ' + esc(tNames) : ''} · ${cfg.title} ${list.length}${cfg.unit}</span>
+        <span class="dchips">${chips}</span>
+        <span class="clschips"><button class="${cur ? '' : 'on'}" data-c="">전체 ${list.length}</button>${ccs.map(c => `<button class="${cur === c ? 'on' : ''}" data-c="${c}">${fmtClass(c)} ${byCls.get(c).length}</button>`).join('')}</span>
+      </div>`;
+    for (const c of ccs) {
+      if (cur && c !== cur) continue;
+      html += `<div class="clsline">${fmtClass(c)} · ${byCls.get(c).length}${cfg.unit}</div>` + cfg.items(byCls.get(c), refs);
+    }
+    const ex = cfg.extra ? cfg.extra(r, sel) : '';
+    if (ex) html += ex.html + cfg.items(ex.list, refs, true);
+    panel.innerHTML = html;
+    $('#tab-back').onclick = () => { if (history.state && history.state.matIdx != null) { history.back(); return; } state.tabSel = null; renderIssueTab(tab); window.scrollTo(0, 0); };
+    panel.querySelectorAll('.clschips button').forEach(b => b.onclick = () => { state.tabCls[tab] = b.dataset.c || null; renderIssueTab(tab); });
+  } else {
+    // 과목 카드: 지적 있는 과목(다크, 건수순) → 이상 없는 과목(라이트)
+    html += head(`지적 과목 ${withIss.length} · 이상 없음 ${clean.length}`);
+    const cmp = (a, b) => ((a.m.grade || 9) - (b.m.grade || 9)) || (matRank(a.m) - matRank(b.m)) || a.m.name.localeCompare(b.m.name);
+    withIss.sort((a, b) => (b.m.iss[cfg.key].length - a.m.iss[cfg.key].length) || cmp(a, b));
+    clean.sort(cmp);
+    if (withIss.length) {
+      html += `<div class="tgrid">` + withIss.map(({ m, i }) => {
+        const list = m.iss[cfg.key];
+        const tNames = m.teachers && m.teachers.size ? [...m.teachers].join(', ') : '';
+        const chips = cfg.chips(list).filter(Boolean).map(([c, t]) => `<span class="${c}">${t}</span>`).join('');
+        const words = cfg.words(list);
+        return `<button class="mat2 tabc ${m.cls}" data-i="${i}"><span class="hair"></span>
+          <span class="z" style="display:block">
+            <span class="kind">${m.kind}</span>
+            <h3><span class="nm">${esc(m.name)}</span>${m.merged ? '<span class="mgb">1·2학기 합산</span>' : ''}<span class="cls">${clsLabel(m)}</span></h3>
+            <span class="m-meta" style="display:block">${m.isJoint ? '공동교육과정' : (tNames ? '담당 ' + esc(tNames) : (m.cls === 'cc' ? (m.areasList ? esc(m.areasList.join('·')) : '') : ''))}</span>
+            <span class="big"><b>${list.length}</b>${chips}</span>
+            ${words ? `<span class="words">${words}</span>` : ''}
+          </span><span class="go">→</span></button>`;
+      }).join('') + `</div>`;
+    } else {
+      html += `<div class="empty"><div class="big">✅</div>${cfg.empty}</div>`;
+    }
+    if (clean.length) {
+      html += `<div class="okrule">✓ 이상 없는 과목 ${clean.length}</div><div class="lgrid">` + clean.map(({ m, i }) => {
+        const tNames = m.teachers && m.teachers.size ? [...m.teachers].join(', ') : '';
+        const meta = m.norm === '__vol__' ? `학생 ${m.volStuds} · 기록 ${m.volActs}` : `학생 ${m.pyEnrolled || m.total} · 작성 ${m.writers.size}`;
+        return `<button class="lcard ${m.cls}" data-i="${i}"><span class="kind">${m.kind}</span>
+          <span class="h4"><span class="nm">${esc(m.name)}</span><span class="cls">${clsLabel(m)}</span></span>
+          <span class="tch">${m.isJoint ? '공동교육과정' : (tNames ? '담당 ' + esc(tNames) : '')}</span>
+          <span class="row"><span class="ok">✓ 이상 없음</span><span class="meta">${meta}</span></span></button>`;
+      }).join('') + `</div>`;
+    }
+    const ex = cfg.extra ? cfg.extra(r, null) : '';
+    if (ex) html += ex.html + cfg.items(ex.list, refs, true);
+    panel.innerHTML = html;
+    panel.querySelectorAll('.mat2.tabc').forEach(b => b.onclick = () => {
+      state.tabSel = { tab, i: +b.dataset.i }; state.tabCls[tab] = null;
+      try { history.replaceState({ tab }, ''); history.pushState({ tab, matIdx: state.tabSel.i }, ''); } catch (e) {}
+      renderIssueTab(tab); window.scrollTo(0, 0);
+    });
+    panel.querySelectorAll('.lcard').forEach(b => b.onclick = () => {
+      // 이 항목에서는 볼 게 없으니 대시보드의 과목 상세로 (다른 항목 지적은 거기서)
+      state.matSel = +b.dataset.i;
+      try { history.replaceState({ tab }, ''); history.pushState({ matSel: state.matSel }, ''); } catch (e) {}
+      showTab('dash'); renderDash(); window.scrollTo(0, 0);
+    });
+  }
+  panel.querySelectorAll('.seg button').forEach(b => b.onclick = () => { state.tabView[tab] = b.dataset.v; state.tabSel = null; renderIssueTab(tab); });
+  if (cfg.bind) cfg.bind(panel, refs);
+}
+function renderForbidden() { renderIssueTab('forbidden'); }
+function renderStyle() { renderIssueTab('style'); }
+function renderTypos() { renderIssueTab('typos'); }
+function renderEnding() { renderIssueTab('ending'); }
+function renderSim() { renderIssueTab('sim'); }
+function renderLength() { renderIssueTab('length'); }
 
 function lenGauge(l) {
   // 쌍(합산) 게이지: 1학기·2학기 두 색 + 초과분 빗금
@@ -3099,85 +3438,6 @@ function lenBodyHTML(l) {
   if (l.entry2) return block('1학기 · ' + l.entry.label, l.entry) + block('2학기 · ' + l.entry2.label, l.entry2);
   return block(l.entry.label, l.entry);
 }
-function renderLength() {
-  const r = state.res, L = NEISCheck.LIMITS;
-  let html = `<div class="section-note">상한(한글 3B·영문/숫자 1B): 교과 세특·자율·동아리 1,500B · 진로활동 1·2학년 1,500B/3학년 2,100B · 행동특성 1·2학년 900B/3학년 1,500B · <b>1학년 공통과목(공통국어·수학·영어, 통합사회·과학, 한국사 등)은 1·2학기 합산 1,500B</b> · 교과 세특 ${L.minBytes.toLocaleString()}B 미만은 분량 부족 주의 · 항목을 누르면 기재 내용이 펼쳐집니다</div>`;
-  const infos = r.pairInfo || [];
-  if (!r.length.length && !infos.length) { $('#panel-length').innerHTML = html + '<div class="empty"><div class="big">✅</div>분량 기준을 벗어난 항목이 없습니다.</div>'; return; }
-  const KIND = {
-    over: ['danger', '상한 초과'], under: ['warn', '분량 부족'],
-    pairover: ['danger', '합산 초과'], pairunder: ['warn', '합산 부족'],
-  };
-  const ord = { pairover: 0, over: 0, pairunder: 1, under: 1 };
-  const list = [...r.length].sort((a, b) => (ord[a.kind] - ord[b.kind]) || b.diff - a.diff);
-  const lenRefs = [];
-  const card = (l, isInfo) => {
-    const k = lenRefs.length;
-    lenRefs.push(l);
-    const isPair = l.kind === 'pairover' || l.kind === 'pairunder' || isInfo;
-    const subj = l.entry2 ? `${esc(l.entry.label)} + ${esc(l.entry2.label)}` : esc(l.entry.label);
-    let body;
-    if (isInfo) body = `공통과목은 <b style="color:#3b6bc4">1·2학기 합산 기준 ${l.cap.toLocaleString()}B</b> — 현재 ${l.entry.label.slice(-1) === '2' ? '2학기' : '1학기'}분 ${l.sum.toLocaleString()}B 사용, 남은 여유 <b style="color:#3b6bc4">${(l.cap - l.sum).toLocaleString()}B</b> (나머지 학기 자료가 오면 합산으로 판정)`;
-    else if (isPair) body = `합산 <b>${l.sum.toLocaleString()}B</b> (기준 ${l.kind === 'pairover' ? '≤' + l.cap.toLocaleString() : '≥' + L.minBytes.toLocaleString()}B) — ${l.kind === 'pairover' ? `<b>${l.diff.toLocaleString()}B 초과</b>. 두 학기 내용을 합쳐 그만큼 줄여야 NEIS에 모두 들어갑니다.` : `<b>${l.diff.toLocaleString()}B 부족</b>. 활동 내용을 보강해 주세요.`}`;
-    else body = `현재 <b>${l.entry.bytes.toLocaleString()}B</b> (기준 ${l.kind === 'over' ? '≤' : '≥'}${(l.kind === 'over' ? l.cap : L.minBytes).toLocaleString()}B) — ${l.kind === 'over' ? `<b>${l.diff.toLocaleString()}B 초과</b>. NEIS 입력 시 잘릴 수 있으니 줄여야 합니다.` : `<b>${l.diff.toLocaleString()}B 부족</b>. 활동 내용을 보강해 주세요.`}`;
-    const pill = isInfo ? '<span class="pill info-b">합산 사용량</span>' : `<span class="pill ${KIND[l.kind][0]}">${KIND[l.kind][1]}</span>`;
-    return `<div class="issue len-row" data-k="${k}">
-      <div class="issue-head">${pill}
-        <span class="who">${fmtClass(l.st.classCode)} ${stuLabel(l.st)}</span>
-        <span class="subj">${subj}</span>${tch(l.entry)}
-        <span class="subj" style="margin-left:auto">▾ 내용 보기</span>
-      </div>
-      ${isPair && !isInfo ? lenGauge(l) : (isInfo ? lenGauge({ ...l, kind: 'info' }) : '')}
-      <div class="issue-body">${body}</div>
-      <div class="len-detail" id="lend-${k}"></div>
-    </div>`;
-  };
-  html += list.map(l => card(l, false)).join('');
-  if (infos.length) {
-    html += `<div class="section-title">1학년 공통과목 합산 사용량</div>
-      <div class="section-note">한 학기 자료만 있어 판정 대신 사용량만 안내합니다 — 나머지 학기 자료까지 올리면 합산으로 판정됩니다</div>`;
-    html += infos.map(p => card({ ...p, kind: 'info' }, true)).join('');
-  }
-  $('#panel-length').innerHTML = html;
-  document.querySelectorAll('#panel-length .len-row').forEach(el => el.onclick = () => {
-    const k = +el.dataset.k, d = document.getElementById('lend-' + k);
-    if (d.classList.contains('open')) { d.classList.remove('open'); return; }
-    if (!d.innerHTML) d.innerHTML = lenBodyHTML(lenRefs[k]);
-    d.classList.add('open');
-  });
-}
-
-function renderStyle() {
-  const r = state.res;
-  if (!r.style.length) { $('#panel-style').innerHTML = '<div class="empty"><div class="big">✅</div>문체·클리셰 관련 지적 사항이 없습니다.</div>'; return; }
-  $('#panel-style').innerHTML = r.style.map(s => `
-    <div class="issue">
-      <div class="issue-head">
-        <span class="pill warn">${s.kind === 'repeat' ? '표현 반복' : '클리셰'}</span>
-        <span class="who">${fmtClass(s.st.classCode)} ${stuLabel(s.st)}</span>
-        <span class="subj">${esc(s.entry.label)}</span>${tch(s.entry)}
-      </div>
-      <div class="issue-body">'<b>${esc(s.word)}</b>' ${s.kind === 'repeat' ? `표현이 한 과목 안에서 ${s.count}회 사용됨 — 다른 표현으로 다듬어 주세요.` : `사용 (${s.count}회) — 상투적 표현이라 구체적 사실 중심 서술이 좋습니다.`}</div>
-    </div>`).join('');
-}
-
-function renderTypos() {
-  const r = state.res;
-  let html = `<div class="section-note">오프라인 규칙 검사입니다 — 자주 틀리는 맞춤법·외래어 표기·이중 피동·단어 반복·문장부호·서술형 종결을 잡습니다 (완전한 맞춤법 검사를 대신하지는 않음)</div>`;
-  if (!r.typos.length) { $('#panel-typos').innerHTML = html + '<div class="empty"><div class="big">✅</div>오탈자·표기 오류가 발견되지 않았습니다.</div>'; return; }
-  $('#panel-typos').innerHTML = html + r.typos.map(t => `
-    <div class="issue">
-      <div class="issue-head">
-        <span class="pill warn">오탈자</span>
-        <span class="who">${fmtClass(t.st.classCode)} ${stuLabel(t.st)}</span>
-        <span class="subj">${esc(t.entry.label)}</span>${tch(t.entry)}
-      </div>
-      <div class="issue-body">
-        <div class="ctx">${esc(t.context).replace(esc(t.match), `<mark>${esc(t.match)}</mark>`)}</div>
-        <div class="why"><b>바른 표기</b> · ${esc(t.fix)}</div>
-      </div>
-    </div>`).join('');
-}
 // 문장 맺음: 끝부분 텍스트에서 끊긴 조각을 강조 + 커서 표시
 function endHl(tail, kind) {
   let frag;
@@ -3194,51 +3454,6 @@ function endHl(tail, kind) {
   const pre = tail.slice(0, tail.length - frag.length);
   const soft = kind === 'nodot' ? ' soft' : '';
   return `${esc('…' + pre)}<span class="cut${soft}">${esc(frag)}</span><span class="cur${soft}"></span>`;
-}
-function renderEnding() {
-  const r = state.res;
-  let html = `<div class="section-note">기재 내용의 끝맺음을 검사합니다 — 엑셀에서 복사해 NEIS에 붙여넣을 때 바이트 초과로 뒷부분이 잘려 문장이 중간에 끊기는 사례를 잡습니다 · 빨간 커서가 끊긴 지점입니다</div>`;
-  if (!r.ending.length) { $('#panel-ending').innerHTML = html + '<div class="empty"><div class="big">✅</div>모든 기재 내용이 문장으로 끝맺어져 있습니다.</div>'; return; }
-  const sorted = [...r.ending].sort((a, b) => (a.kind === 'cut' ? 0 : 1) - (b.kind === 'cut' ? 0 : 1));
-  $('#panel-ending').innerHTML = html + sorted.map(x => `
-    <div class="issue">
-      <div class="issue-head">
-        <span class="pill ${x.kind === 'cut' ? 'danger' : 'warn'}">${x.kind === 'cut' ? '문장 끊김' : '마침표 누락'}</span>
-        <span class="who">${fmtClass(x.st.classCode)} ${stuLabel(x.st)}</span>
-        <span class="subj">${esc(x.entry.label)}</span>${tch(x.entry)}
-      </div>
-      <div class="issue-body">
-        <div class="ctx">${endHl(x.tail, x.kind)}</div>
-        <div class="why">${x.kind === 'cut'
-          ? '<b>문장이 끝나기 전에 끊겼습니다</b> — 붙여넣기 중 바이트 초과로 잘렸을 가능성이 있으니 NEIS 원문을 확인해 주세요.'
-          : '<b>마지막 마침표가 없습니다</b> — 문장은 완결됐지만 끝부분이 잘렸을 수도 있으니 확인해 주세요.'}</div>
-      </div>
-    </div>`).join('');
-}
-function renderSim() {
-  const r = state.res, L = NEISCheck.LIMITS;
-  let html = `<div class="section-note">같은 과목을 들은 학생끼리 문자 3-gram 유사도를 비교합니다 · ${L.simDanger} 이상 위험, ${L.simWarn} 이상 주의 · 항목을 누르면 겹치는 문장이 나란히 표시됩니다</div>`;
-  if (!r.similarity.length) { $('#panel-sim').innerHTML = html + '<div class="empty"><div class="big">✅</div>유사도가 높은 학생 쌍이 없습니다.</div>'; return; }
-  $('#panel-sim').innerHTML = html + r.similarity.map((s, i) => `
-    <div class="issue sim-row" data-i="${i}">
-      <div class="issue-head">
-        <span class="pill ${s.grade === '위험' ? 'danger' : 'warn'}">${s.grade}</span>
-        <span class="subj">${esc(s.subject)}</span>${tch(s.a.entry)}
-        <span class="who">${fmtClass(s.a.st.classCode)} ${stuLabel(s.a.st)} ↔ ${fmtClass(s.b.st.classCode)} ${stuLabel(s.b.st)}</span>
-        <span class="sim-score ${s.grade === '위험' ? 'hot' : 'mid'}" style="margin-left:auto">${(s.sim * 100).toFixed(0)}%</span>
-      </div>
-      <div class="sim-detail" id="simd-${i}"></div>
-    </div>`).join('');
-  document.querySelectorAll('.sim-row').forEach(el => el.onclick = () => {
-    const i = +el.dataset.i, d = $('#simd-' + i), s = r.similarity[i];
-    if (d.classList.contains('open')) { d.classList.remove('open'); return; }
-    if (!d.innerHTML) {
-      const ov = NEISCheck.sentenceOverlap(s.a.entry.body, s.b.entry.body);
-      const col = (st, sents, hits) => `<div class="sim-col"><h4>${fmtClass(st.classCode)} ${stuLabel(st)} · ${esc(s.subject)}</h4>${sents.map((t, k) => `<p class="${hits.has(k) ? 'hit' : ''}">${esc(t)}</p>`).join('')}</div>`;
-      d.innerHTML = col(s.a.st, ov.sa, ov.hitA) + col(s.b.st, ov.sb, ov.hitB);
-    }
-    d.classList.add('open');
-  });
 }
 
 function renderMissing() {
